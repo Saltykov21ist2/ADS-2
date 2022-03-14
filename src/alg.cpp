@@ -25,7 +25,7 @@ double expn(double y, uint16_t count) {
     uint16_t i;
     double y;
     for (i = 0; i <= count; i++) {
-        y += calcItem(x, i);
+        y += calcItem(y, i);
     }
     return y;
 }
@@ -34,7 +34,7 @@ double sinn(double y, uint16_t count) {
     uint16_t i;
     double y = 0;
     for (i = 1; i <= count; i++) {
-        y += pown(-1, i-1)*calcItem(x, 2*i-1);
+        y += pown(-1, i-1)*calcItem(y, 2*i-1);
     }
     return y;
 }
@@ -43,7 +43,7 @@ double cosn(double y, uint16_t count) {
     uint16_t i;
     double y = 0;
     for (i = 1; i <= count; i++) {
-        y += pown(-1, i-1)*calcItem(x, 2*i-2);
+        y += pown(-1, i-1)*calcItem(y, 2*i-2);
     }
     return y;
 }
